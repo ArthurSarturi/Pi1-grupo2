@@ -3,7 +3,7 @@ from db import db
 class PostModel(db.Model):
     __tablename__ = "Posts"
 
-    id = db.Column(db.Integer, primare_key = True) 
+    id = db.Column(db.Integer, primary_key = True) 
     userName = db.Column(db.String(99))
     title = db.Column(db.String(99))
     content = db.Column(db.Text)
