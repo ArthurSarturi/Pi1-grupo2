@@ -6,4 +6,4 @@ class BookModel(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(99))
 
-    posts = db.relationship("Post", back_populates="book", cascade="all, delete-orphan")
+    posts = db.relationship("PostModel", back_populates="book", cascade="all, delete-orphan")

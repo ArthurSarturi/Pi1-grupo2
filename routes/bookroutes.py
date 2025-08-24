@@ -4,4 +4,4 @@ from controllers import bookcontroller
 book_bp = Blueprint("BookBP", __name__, url_prefix="/Books")
 @book_bp.route("/add", methods=["POST"])
 def createBook():
-    bookcontroller.createBook
+    return bookcontroller.createBook()

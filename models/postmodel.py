@@ -10,4 +10,4 @@ class PostModel(db.Model):
 
     bookId = db.Column(db.Integer, db.ForeignKey("Books.id"), nullable=False)
 
-    book = db.relationship("Book", back_populates="posts") ## facilita o referenciamento no codigo. 
+    book = db.relationship("BookModel", back_populates="posts") ## facilita o referenciamento no codigo. 
