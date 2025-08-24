@@ -1,0 +1,9 @@
+from db import db
+
+class BookModel(db.Model):
+    __tablename__ = "Books"
+    
+    id = db.Column(db.Integer, primare_key = True)
+    name = db.Column(db.String(99))
+
+    posts = db.relationship("Post", back_populates="book", cascade="all, delete-orphan")
