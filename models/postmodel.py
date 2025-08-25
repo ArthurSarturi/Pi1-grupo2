@@ -8,6 +8,6 @@ class PostModel(db.Model):
     title = db.Column(db.String(99))
     content = db.Column(db.Text)
 
-    bookId = db.Column(db.Integer, db.ForeignKey("Books.id"), nullable=False)
+    bookId = db.Column(db.Integer, db.ForeignKey("Books.id"), nullable=True)
 
     book = db.relationship("BookModel", back_populates="posts") ## facilita o referenciamento no codigo. 

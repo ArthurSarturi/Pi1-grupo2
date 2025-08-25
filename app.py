@@ -1,9 +1,11 @@
 from flask import Flask
 from routes.bookroutes import book_bp
+from routes.postroutes import Post_bp
 from db import db
 
 app = Flask(__name__)
 app.register_blueprint(book_bp)
+app.register_blueprint(Post_bp)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///forum.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
